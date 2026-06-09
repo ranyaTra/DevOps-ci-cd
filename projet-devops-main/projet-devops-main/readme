@@ -1,1 +1,247 @@
-test
+# Event Management Platform – DevOps CI/CD Pipeline
+
+## Overview
+
+This project demonstrates the implementation of a complete DevOps ecosystem around a Spring Boot application for event management.
+
+The platform integrates Continuous Integration, Continuous Delivery, code quality analysis, artifact management, containerization, automated deployment, and monitoring.
+
+The objective is to automate the entire software delivery lifecycle from source code commit to deployment and observability.
+
+---
+
+## Features
+
+* Event Management REST API
+* Spring Boot Backend
+* MySQL Database
+* Automated Testing with JUnit & Mockito
+* Code Coverage with JaCoCo
+* Static Code Analysis with SonarQube
+* Artifact Management with Nexus Repository
+* Docker Containerization
+* DockerHub Image Publishing
+* Automated CI/CD Pipeline with Jenkins
+* Monitoring with Prometheus
+* Visualization with Grafana
+* Container Monitoring with cAdvisor
+* System Metrics with Node Exporter
+
+---
+
+## Architecture
+
+![Architecture](screenshots/architecture.png)
+
+### DevOps Ecosystem
+
+| Component           | Technology     |
+| ------------------- | -------------- |
+| Source Control      | GitHub         |
+| Backend             | Spring Boot    |
+| Database            | MySQL          |
+| CI/CD               | Jenkins        |
+| Code Quality        | SonarQube      |
+| Artifact Repository | Nexus 3        |
+| Containerization    | Docker         |
+| Image Registry      | DockerHub      |
+| Deployment          | Docker Compose |
+| Monitoring          | Prometheus     |
+| Visualization       | Grafana        |
+| Container Metrics   | cAdvisor       |
+| Host Metrics        | Node Exporter  |
+
+---
+
+## CI/CD Pipeline
+
+The Jenkins pipeline automatically executes on each push to GitHub.
+
+### Continuous Integration
+
+1. Source Code Checkout
+2. Maven Build
+3. Unit Testing
+4. JaCoCo Coverage Analysis
+5. SonarQube Analysis
+6. Quality Gate Validation
+
+### Continuous Delivery
+
+1. Package Application
+2. Publish Artifact to Nexus
+3. Build Docker Image
+4. Push Image to DockerHub
+5. Deploy Complete Stack using Docker Compose
+
+### Jenkins Pipeline
+
+![Jenkins Pipeline](screenshots/jenkins.png)
+
+---
+
+## Code Quality
+
+The project integrates SonarQube to ensure maintainable and reliable code.
+
+### Quality Metrics
+
+* Bugs Detection
+* Vulnerability Analysis
+* Code Smells Detection
+* Code Duplication Analysis
+* Test Coverage Measurement
+
+![SonarQube Dashboard](screenshots/sonarqube.png)
+
+---
+
+## Artifact Management
+
+Compiled Maven artifacts are automatically versioned and published to Nexus Repository Manager.
+
+### Benefits
+
+* Version Tracking
+* Artifact Storage
+* Build Reproducibility
+* Dependency Management
+
+![Nexus Repository](screenshots/nexus.png)
+
+---
+
+## Containerization & Deployment
+
+The application is containerized using Docker and deployed through Docker Compose.
+
+### Docker Components
+
+* Spring Boot Application
+* MySQL Database
+* Prometheus
+* Grafana
+* cAdvisor
+* Node Exporter
+
+### DockerHub
+
+![DockerHub Repository](screenshots/dockerhub.png)
+
+---
+
+## Monitoring & Observability
+
+The platform includes a complete monitoring stack.
+
+### Prometheus
+
+Collects metrics from:
+
+* Spring Boot Application
+* Prometheus Server
+* cAdvisor
+* Node Exporter
+
+![Prometheus Targets](screenshots/prometheus.png)
+
+### Grafana
+
+Visualizes:
+
+* JVM Metrics
+* CPU Usage
+* Memory Usage
+* Request Rate
+* HTTP Latency
+* Database Connections
+* Container Metrics
+
+![Grafana Dashboard](screenshots/grafana.png)
+
+---
+
+## Testing
+
+### Unit Tests
+
+The project uses:
+
+* JUnit 5
+* Mockito
+* JaCoCo
+
+Tests validate the service layer independently from the database using mocked repositories.
+
+---
+
+## Project Structure
+
+```text
+.
+├── Dockerfile
+├── Jenkinsfile
+├── docker-compose.yml
+├── pom.xml
+├── prometheus/
+├── grafana/
+├── src/
+│   ├── main/
+│   └── test/
+└── screenshots/
+```
+
+---
+
+## Running the Project
+
+### Clone Repository
+
+```bash
+git clone https://github.com/your-username/event-management-devops.git
+cd event-management-devops
+```
+
+### Start the Platform
+
+```bash
+docker-compose up -d
+```
+
+### Access Services
+
+| Service     | URL                                                |
+| ----------- | -------------------------------------------------- |
+| Application | http://localhost:8089                              |
+| Swagger UI  | http://localhost:8089/events/swagger-ui/index.html |
+| Jenkins     | http://localhost:8080                              |
+| SonarQube   | http://localhost:9000                              |
+| Nexus       | http://localhost:8081                              |
+| Prometheus  | http://localhost:9090                              |
+| Grafana     | http://localhost:3000                              |
+
+---
+
+## Results
+
+✔ Automated CI/CD Pipeline
+
+✔ Code Quality Enforcement
+
+✔ Artifact Versioning
+
+✔ Docker-Based Deployment
+
+✔ Production-Style Monitoring
+
+✔ End-to-End DevOps Workflow
+
+---
+
+## Author
+
+**Rania Trabelsi**
+
+Engineering Student – Intelligent Systems & Artificial Intelligence
+
+DevOps | Backend Development | Machine Learning | Software Engineering
